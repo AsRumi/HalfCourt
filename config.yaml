@@ -1,0 +1,40 @@
+data:
+  seasons: ["2018-19", "2019-20", "2020-21", "2021-22", "2022-23"]
+  raw_cache_dir: "data/raw"
+  processed_dir: "data/processed"
+  processed_filename: "halfcourt_training.parquet"
+  api_sleep_seconds: 0.6
+  api_max_retries: 3
+  api_backoff_base: 2
+
+model:
+  type: "xgboost"           # options: xgboost, logistic_regression, mlp
+  saved_dir: "models/saved"
+  test_size: 0.2
+  random_state: 42
+  xgboost:
+    n_estimators: 300
+    max_depth: 5
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    early_stopping_rounds: 20
+  logistic_regression:
+    max_iter: 1000
+    C: 1.0
+  mlp:
+    hidden_layers: [128, 64, 32]
+    dropout: 0.3
+    epochs: 100
+    learning_rate: 0.001
+    batch_size: 64
+
+llm:
+  provider: "openai"        # options: openai, anthropic
+  model: "gpt-4o-mini"      # use mini during dev, gpt-4o for final demo
+  max_tokens: 1200
+  temperature: 0.4
+
+output:
+  reports_dir: "reports"
+  format: "both"            # options: json, markdown, both
