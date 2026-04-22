@@ -1,0 +1,34 @@
+{
+  "game_context": {
+    "home_team": "BOS",
+    "away_team": "PHI",
+    "game_date": "2026-04-21",
+    "is_playoffs": true,
+    "is_live": true
+  },
+  "prediction": {
+    "predicted_winner": "away",
+    "win_probability": 0.4545,
+    "predicted_margin": -1,
+    "confidence_tier": "low",
+    "top_features": [
+      {
+        "feature": "ht_score_diff",
+        "value": 0.0,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "q1_diff",
+        "value": 0.0,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "q2_diff",
+        "value": 0.0,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "**1. SCORE & MOMENTUM**\n\nThe Philadelphia 76ers hold a slim 35-27 lead at halftime, but the momentum has swung significantly. After a close first quarter, the Celtics were outscored by 11 points in the second, resulting in a -14 momentum shift favoring the 76ers. This second-quarter surge by Philadelphia has given them the edge heading into the break.\n\n**2. KEY PLAYER ANALYSIS**\n\nThe 76ers' star player has been the catalyst for their offense, pouring in 20 points. While the Celtics' star player has contributed 15 points, they've also dished out 3 assists, indicating a more distributed offensive effort for Boston. The 76ers' star has been more focused on scoring, leading their team's offensive charge.\n\n**3. X-FACTORS / FOUL TROUBLE**\n\nPhiladelphia's efficiency is a major factor, boasting a 51.0% field goal percentage and an impressive 52.6% from three-point range. The Celtics, conversely, are shooting just 44.2% from the field and a meager 27.3% from deep. While the Celtics have a slight rebound advantage, the 76ers' superior shooting percentages are dictating the game's flow.\n\n**4. SECOND-HALF OUTLOOK**\n\nThe 76ers are poised to win this tight contest by a single point. Their sharp shooting, particularly from beyond the arc, has been the difference-maker. If the Celtics cannot find an answer for Philadelphia's offensive efficiency and improve their own shooting, they will struggle to close the gap in the second half.",
+  "generated_at": "2026-04-22T00:21:26.797931Z"
+}

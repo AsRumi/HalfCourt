@@ -1,0 +1,7 @@
+.venv
+.env*
+.DS*
+.vscode*
+__pycache__/
+*.py[cod]
+*$py.class
