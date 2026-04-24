@@ -19,6 +19,13 @@ from halfcourt.output_formatter import format_report
 log = logging.getLogger(__name__)
 
 
+def _star_name(players: list) -> str:
+    if not players:
+        return "Unknown"
+    star = max(players, key=lambda p: (p.get("PTS", 0), p.get("AST", 0)))
+    return star.get("player_name", "Unknown")
+
+
 class Agent:
     def run(self, game_id: str, model_type: str = "mlp") -> dict:
         """
@@ -48,6 +55,8 @@ class Agent:
             "q1_away_pts":  raw_game["halftime_score"]["q1_away_pts"],
             "q2_home_pts":  raw_game["halftime_score"]["q2_home_pts"],
             "q2_away_pts":  raw_game["halftime_score"]["q2_away_pts"],
+            "home_star_name": _star_name(raw_game["home_team"]["players"]),
+            "away_star_name": _star_name(raw_game["away_team"]["players"]),
         }
 
         log.info("Running inference - model: %s", model_type)
@@ -94,6 +103,8 @@ class Agent:
             "q1_away_pts":  raw_game["halftime_score"]["q1_away_pts"],
             "q2_home_pts":  raw_game["halftime_score"]["q2_home_pts"],
             "q2_away_pts":  raw_game["halftime_score"]["q2_away_pts"],
+            "home_star_name": _star_name(raw_game["home_team"]["players"]),
+            "away_star_name": _star_name(raw_game["away_team"]["players"]),
         }
 
         log.info("Running inference - model: %s", model_type)

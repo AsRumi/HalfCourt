@@ -56,8 +56,8 @@ def _stats_table(feature_vector: dict, game_context: dict) -> str:
         row("Bench Ratio", feature_vector["home_bench_ratio"], feature_vector["away_bench_ratio"], fmt=".3f"),
         row("Starters w/ 3+ Fouls", feature_vector["home_starters_3foul"], feature_vector["away_starters_3foul"]),
         row("Foul Diff (home-away)", feature_vector["foul_diff"], "", fmt=""),
-        row("Star Player Points", feature_vector["home_star1_pts"], feature_vector["away_star1_pts"]),
-        row("Star Player Assists", feature_vector["home_star1_ast"], feature_vector["away_star1_ast"]),
+        row(f"Star PTS ({game_context['home_star_name']} / {game_context['away_star_name']})", feature_vector["home_star1_pts"], feature_vector["away_star1_pts"]),
+        row("Star Assists", feature_vector["home_star1_ast"], feature_vector["away_star1_ast"]),
         row("Star Foul Flag (3+ PF)", feature_vector["home_star_foul_flag"], feature_vector["away_star_foul_flag"]),
         row("Rest Days", feature_vector["home_rest_days"], feature_vector["away_rest_days"]),
         row("Back-to-Back", feature_vector["home_back2back"], feature_vector["away_back2back"]),
@@ -78,6 +78,9 @@ def _prediction_block(prediction: dict, game_context: dict) -> str:
         else "Predicted Margin   : N/A (Logistic Regression does not predict margin)"
     )
 
+    home_star = game_context.get("home_star_name", "")
+    away_star = game_context.get("away_star_name", "")
+
     feature_lines = []
     for f in prediction["top_features"]:
         direction = (
@@ -85,6 +88,11 @@ def _prediction_block(prediction: dict, game_context: dict) -> str:
             else game_context["away_team"]
         )
         feature_lines.append(f"  - {f['feature']} (SHAP: {f['value']:+.4f}) -> favors {direction}")
+
+    star_context = (
+        f"\nKey Players: {game_context['home_team']} star: {home_star} | "
+        f"{game_context['away_team']} star: {away_star}"
+    )
 
     features_str = "\n".join(feature_lines)
 
@@ -94,6 +102,7 @@ def _prediction_block(prediction: dict, game_context: dict) -> str:
         f"Win Probability    : {prob_pct}% (home team)\n"
         f"{margin_line}\n"
         f"Confidence Tier    : {prediction['confidence_tier'].upper()}\n"
+        f"{star_context}\n"
         f"\nTop Driving Features:\n{features_str}"
     )
 
