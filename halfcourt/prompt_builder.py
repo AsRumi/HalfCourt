@@ -25,27 +25,23 @@ def _stats_table(feature_vector: dict, game_context: dict) -> str:
     home = game_context["home_team"]
     away = game_context["away_team"]
 
-    rows = [
-        "HALFTIME STATS",
-        f"{'Stat':<28} {'Home (' + home + ')':>16} {'Away (' + away + ')':>16}",
-        "-" * 62,
-        f"{'Points':<28} {feature_vector['ht_score_diff'] // 1:>16} {'':>16}",
-    ]
-
-    # Score state
-    ht_home = (feature_vector["ht_score_diff"] + _total_pts_sum(feature_vector)) // 2
-    ht_away = ht_home - feature_vector["ht_score_diff"]
+    ht_home = game_context["ht_home_pts"]
+    ht_away = game_context["ht_away_pts"]
+    q1_home = game_context["q1_home_pts"]
+    q1_away = game_context["q1_away_pts"]
+    q2_home = game_context["q2_home_pts"]
+    q2_away = game_context["q2_away_pts"]
 
     def row(label, home_val, away_val, fmt=".0f"):
         return f"{label:<28} {home_val:>16{fmt}} {away_val:>16{fmt}}"
 
     lines = [
         "HALFTIME STATS",
-        f"{'Stat':<28} {'Home':>16} {'Away':>16}",
+        f"{'Stat':<28} {'Home (' + home + ')':>16} {'Away (' + away + ')':>16}",
         "-" * 62,
         row("Halftime Score", ht_home, ht_away),
-        row("Q1 Score Diff (home-away)", feature_vector["q1_diff"], "", fmt=""),
-        row("Q2 Score Diff (home-away)", feature_vector["q2_diff"], "", fmt=""),
+        row("Q1 Score", q1_home, q1_away),
+        row("Q2 Score", q2_home, q2_away),
         row("Momentum Shift", feature_vector["momentum_shift"], "", fmt=""),
         row("FG%", feature_vector["home_fg_pct"], feature_vector["away_fg_pct"], fmt=".3f"),
         row("3P%", feature_vector["home_3p_pct"], feature_vector["away_3p_pct"], fmt=".3f"),
@@ -69,22 +65,18 @@ def _stats_table(feature_vector: dict, game_context: dict) -> str:
     return "\n".join(lines)
 
 
-def _total_pts_sum(feature_vector: dict) -> int:
-    """Reconstruct total halftime points from score diff and bench ratio clues - not available directly."""
-    # We don't have absolute scores in the feature vector, only diffs.
-    # Use star pts + bench pts as a floor estimate for display purposes.
-    home_est = feature_vector["home_star1_pts"] + feature_vector["home_bench_pts"]
-    away_est = feature_vector["away_star1_pts"] + feature_vector["away_bench_pts"]
-    return home_est + away_est
-
-
 def _prediction_block(prediction: dict, game_context: dict) -> str:
     winner_name = (
         game_context["home_team"] if prediction["predicted_winner"] == "home"
         else game_context["away_team"]
     )
     prob_pct = round(prediction["win_probability"] * 100, 1)
-    margin = abs(prediction["predicted_margin"])
+    raw_margin = prediction["predicted_margin"]
+    margin_line = (
+        f"Predicted Margin   : {winner_name} by {abs(raw_margin)} points"
+        if raw_margin is not None
+        else "Predicted Margin   : N/A (Logistic Regression does not predict margin)"
+    )
 
     feature_lines = []
     for f in prediction["top_features"]:
@@ -92,7 +84,7 @@ def _prediction_block(prediction: dict, game_context: dict) -> str:
             game_context["home_team"] if f["direction"] == "favors_home"
             else game_context["away_team"]
         )
-        feature_lines.append(f"  - {f['feature']} (SHAP: {f['value']:+.4f}) → favors {direction}")
+        feature_lines.append(f"  - {f['feature']} (SHAP: {f['value']:+.4f}) -> favors {direction}")
 
     features_str = "\n".join(feature_lines)
 
@@ -100,7 +92,7 @@ def _prediction_block(prediction: dict, game_context: dict) -> str:
         f"MODEL PREDICTION\n"
         f"Predicted Winner   : {winner_name}\n"
         f"Win Probability    : {prob_pct}% (home team)\n"
-        f"Predicted Margin   : {winner_name} by {margin} points\n"
+        f"{margin_line}\n"
         f"Confidence Tier    : {prediction['confidence_tier'].upper()}\n"
         f"\nTop Driving Features:\n{features_str}"
     )
@@ -125,7 +117,9 @@ def build_prompt(feature_vector: dict, prediction: dict, game_context: dict) -> 
     Args:
         feature_vector: flat feature dict from feature_engineer.py
         prediction:     output dict from predictor.predict()
-        game_context:   {"home_team": str, "away_team": str, "game_date": str, "is_playoffs": bool}
+        game_context:   dict including home_team, away_team, game_date, is_playoffs,
+                        ht_home_pts, ht_away_pts, q1_home_pts, q1_away_pts,
+                        q2_home_pts, q2_away_pts
 
     Returns:
         A dict with "system" and "user" keys, both strings, ready for LLM submission.

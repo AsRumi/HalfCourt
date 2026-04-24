@@ -23,8 +23,6 @@ def _load_config() -> dict:
         return yaml.safe_load(f)
 
 
-# Feature columns (daoud make sure this matches feature_engineer.py plx)
-
 FEATURE_COLS = [
     "ht_score_diff", "q1_diff", "q2_diff", "momentum_shift",
     "home_fg_pct", "home_3p_pct", "home_ft_pct", "home_efg_pct", "home_ts_pct",
@@ -49,8 +47,8 @@ MARGIN_COL = "final_margin"
 class HalfCourtDNN(nn.Module):
     """
     Multi-head DNN:
-      Head 1 (classification): sigmoid → win_probability
-      Head 2 (regression):     linear  → predicted_margin
+      Head 1 (classification): sigmoid -> win_probability
+      Head 2 (regression):     linear  -> predicted_margin
     """
 
     def __init__(self, input_dim: int, hidden_layers: list, dropout: float):
@@ -84,7 +82,7 @@ class HalfCourtDNN(nn.Module):
 
 class SklearnDNNWrapper:
     """
-    Wrap HalfCourtDNN to expose .fit() and .predict_proba() so rest
+    Wrap HalfCourtDNN to expose .fit() and .predict_proba() so the rest
     of the pipeline treats all three models identically.
     """
 
@@ -96,6 +94,7 @@ class SklearnDNNWrapper:
         self.margin_lambda = cfg["model"]["mlp"].get("margin_lambda", 0.1)
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.scaler = StandardScaler()
+        self.background = None
         self.model = HalfCourtDNN(
             input_dim=input_dim,
             hidden_layers=mlp_cfg["hidden_layers"],
@@ -104,6 +103,9 @@ class SklearnDNNWrapper:
 
     def fit(self, X: np.ndarray, y: np.ndarray, margins: np.ndarray = None):
         X_scaled = self.scaler.fit_transform(X).astype(np.float32)
+        rng = np.random.default_rng(42)
+        bg_idx = rng.choice(len(X_scaled), size=min(200, len(X_scaled)), replace=False)
+        self.background = X_scaled[bg_idx]
         y_tensor = torch.tensor(y, dtype=torch.float32)
 
         if margins is None:
@@ -150,16 +152,30 @@ class SklearnDNNWrapper:
         with torch.no_grad():
             win_prob, _ = self.model(torch.tensor(X_scaled).to(self.device))
         probs = win_prob.cpu().numpy()
-        # Return sklearn-style (N, 2) array: [P(away wins), P(home wins)]
         return np.column_stack([1 - probs, probs])
 
     def predict_margin(self, X: np.ndarray) -> np.ndarray:
-        """DNN-exclusive: returns predicted point margin for each sample."""
         X_scaled = self.scaler.transform(X).astype(np.float32)
         self.model.eval()
         with torch.no_grad():
             _, margin_pred = self.model(torch.tensor(X_scaled).to(self.device))
         return margin_pred.cpu().numpy()
+
+
+# Logistic Regression wrapper
+
+class ScaledLogisticRegression:
+    """
+    Bundles a StandardScaler with a LogisticRegression so predictor.py
+    can call .predict_proba() on raw unscaled feature arrays with ease.
+    """
+
+    def __init__(self, scaler, model):
+        self.scaler = scaler
+        self.model = model
+
+    def predict_proba(self, X: np.ndarray) -> np.ndarray:
+        return self.model.predict_proba(self.scaler.transform(X))
 
 
 # Model factory
@@ -226,8 +242,6 @@ def _extract_arrays(df: pd.DataFrame):
     return X, y, margins
 
 
-# Training Loop (DO NOT TRAIN YET!)
-
 def _fit_model(model, model_type: str, X_train, y_train, margins_train, X_val, y_val):
     if model_type == "xgboost":
         model.fit(
@@ -250,16 +264,12 @@ def _save_model(model, model_type: str, cfg: dict):
         joblib.dump(model, save_path)
     except Exception as e:
         raise IOError(f"Failed to save model to '{save_path}': {e}")
-    print(f"Model saved → {save_path}")
+    print(f"Model saved -> {save_path}")
 
 
 # SHAP extraction
 
 def _compute_shap_importance(model, model_type: str, X_test: np.ndarray) -> dict:
-    """
-    Returns {feature_name: mean_abs_shap_value} for the top 10 features.
-    For DNN, uses a background-sample KernelExplainer on the win-prob head.
-    """
     background = X_test[:100] if len(X_test) >= 100 else X_test
 
     if model_type == "xgboost":
@@ -282,12 +292,7 @@ def _compute_shap_importance(model, model_type: str, X_test: np.ndarray) -> dict
 
 # Evaluation report
 
-def _print_evaluation(
-    model_type: str,
-    model,
-    X_train, X_test,
-    y_train, y_test,
-):
+def _print_evaluation(model_type, model, X_train, X_test, y_train, y_test):
     proba = model.predict_proba(X_test)[:, 1]
     preds = (proba >= 0.5).astype(int)
 
@@ -304,7 +309,7 @@ def _print_evaluation(
     print(f"Accuracy       : {accuracy:.3f}")
     print(f"AUC-ROC        : {auc:.3f}")
     print(f"F1 Score       : {f1:.3f}")
-    print(f"Brier Score    : {brier:.3f}   (lower is better; 0.25 = no skill)")
+    print(f"Brier Score    : {brier:.3f}")
     print()
 
     shap_importance = _compute_shap_importance(model, model_type, X_test)
@@ -319,14 +324,6 @@ def _print_evaluation(
 # Public Entry API
 
 def train_model(model_type: str):
-    """
-    Full training pipeline:
-      1. Load processed parquet
-      2. Temporal train/test split
-      3. Build + fit model
-      4. Print evaluation report
-      5. Serialize model to models/saved/
-    """
     cfg = _load_config()
     df = _load_dataset(cfg)
 

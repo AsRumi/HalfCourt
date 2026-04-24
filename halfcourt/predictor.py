@@ -15,7 +15,9 @@ import torch
 import yaml
 
 from halfcourt.exceptions import ModelNotFoundError
-from halfcourt.model_trainer import FEATURE_COLS, SklearnDNNWrapper, HalfCourtDNN
+from halfcourt.model_trainer import (
+    FEATURE_COLS, SklearnDNNWrapper, HalfCourtDNN, ScaledLogisticRegression,
+)
 import halfcourt.model_trainer as _trainer_module
 
 
@@ -31,22 +33,20 @@ def _load_model(model_type: str, cfg: dict):
         raise ModelNotFoundError(
             f"No saved model found at '{path}'. Run 'train --model-type {model_type}' first."
         )
-    # Patch 1: remap Colab's __main__ classes to halfcourt.model_trainer
+    # Remap Colab's __main__ classes to halfcourt.model_trainer so joblib can deserialise
     main_mod = sys.modules["__main__"]
     patched = []
-    for name in ("SklearnDNNWrapper", "HalfCourtDNN"):
+    for name in ("SklearnDNNWrapper", "HalfCourtDNN", "ScaledLogisticRegression"):
         if not hasattr(main_mod, name):
             setattr(main_mod, name, getattr(_trainer_module, name))
             patched.append(name)
-    # Patch 2: force CUDA tensors to load on CPU
     original_torch_load = torch.load
     torch.load = functools.partial(original_torch_load, map_location=torch.device("cpu"))
     try:
         model = joblib.load(path)
-        # Ensure the wrapper also uses CPU going forward
         if hasattr(model, "device"):
             model.device = torch.device("cpu")
-        if hasattr(model, "model"):
+        if hasattr(model, "model") and isinstance(model.model, torch.nn.Module):
             model.model = model.model.cpu()
         return model
     finally:
@@ -72,12 +72,17 @@ def _extract_shap_top3(model, model_type: str, X: np.ndarray) -> list[dict]:
         explainer = shap.TreeExplainer(model)
         shap_values = explainer.shap_values(X)[0]
     elif model_type == "logistic_regression":
-        explainer = shap.LinearExplainer(model, X)
-        shap_values = explainer.shap_values(X)[0]
+        inner_model = model.model if hasattr(model, "model") else model
+        X_scaled = model.scaler.transform(X) if hasattr(model, "scaler") else X
+        explainer = shap.LinearExplainer(inner_model, X_scaled)
+        shap_values = explainer.shap_values(X_scaled)[0]
     elif model_type == "mlp":
+        background = getattr(model, "background", None)
+        if background is None:
+            background = model.scaler.transform(X).astype(np.float32)
         def win_prob_fn(x):
             return model.predict_proba(x)[:, 1]
-        explainer = shap.KernelExplainer(win_prob_fn, X)
+        explainer = shap.KernelExplainer(win_prob_fn, background)
         shap_values = explainer.shap_values(X, nsamples=100)[0]
     else:
         return []
@@ -96,17 +101,18 @@ def _extract_shap_top3(model, model_type: str, X: np.ndarray) -> list[dict]:
     ]
 
 
-def _predict_margin(model, model_type: str, X: np.ndarray) -> int:
+def _predict_margin(model, model_type: str, X: np.ndarray):
     """
     Return a predicted point margin (signed, positive = home wins).
-    XGBoost and logistic regression don't have a margin head, so we
-    derive a rough estimate from win probability: scale linearly over [-20, 20].
+    Only the MLP has a dedicated margin head; logistic regression returns None.
+    XGBoost derives a rough estimate from win probability scaled over [-20, 20].
     """
     if model_type == "mlp":
         return int(round(float(model.predict_margin(X)[0])))
-
+    if model_type == "logistic_regression":
+        return None
+    # xgboost: linear mapping prob=1.0 -> +20, prob=0.0 -> -20
     prob = float(model.predict_proba(X)[0, 1])
-    # Linear mapping: prob=1.0 → +20, prob=0.0 → -20
     return int(round((prob - 0.5) * 40))
 
 
@@ -121,8 +127,8 @@ def predict(feature_vector: dict, model_type: str) -> dict:
     Returns:
         {
             "predicted_winner":  "home" | "away",
-            "win_probability":   float,   # P(home wins), 0-1
-            "predicted_margin":  int,     # signed, positive = home wins by N
+            "win_probability":   float,
+            "predicted_margin":  int | None,
             "confidence_tier":   "high" | "medium" | "low",
             "top_features": [
                 {"feature": str, "value": float, "direction": "favors_home"|"favors_away"}

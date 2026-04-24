@@ -1,0 +1,40 @@
+{
+  "game_context": {
+    "home_team": "ATL",
+    "away_team": "NYK",
+    "game_date": "2026-04-23",
+    "is_playoffs": true,
+    "is_live": true,
+    "ht_home_pts": 58,
+    "ht_away_pts": 50,
+    "q1_home_pts": 33,
+    "q1_away_pts": 21,
+    "q2_home_pts": 25,
+    "q2_away_pts": 29
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.8103,
+    "predicted_margin": 8,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_ts_pct",
+        "value": 0.1151,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_oreb_pct",
+        "value": -0.1083,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_bench_ratio",
+        "value": 0.0969,
+        "direction": "favors_home"
+      }
+    ]
+  },
+  "commentary": "**1. SCORE & MOMENTUM**\n\nThe Atlanta Hawks hold a 58-50 lead over the New York Knicks at halftime. Despite a strong second quarter from the Knicks, the Hawks' dominant first quarter, where they outscored New York 33-21, has given them a crucial advantage. The Hawks have maintained a higher shooting efficiency, reflected in their superior eFG% of 0.536 compared to the Knicks' 0.479.\n\n**2. KEY PLAYER ANALYSIS**\n\nThe Hawks' star player has been efficient, contributing 16 points on strong shooting. However, the Knicks' star has been more involved in playmaking, dishing out 3 assists to the Hawks' star's 1. The Hawks' bench has also provided a significant spark, outscoring the Knicks' reserves 21-19, and contributing to their overall offensive output.\n\n**3. X-FACTORS / FOUL TROUBLE**\n\nFoul trouble is not a major concern for either team's starters, with zero Hawks starters having three or more fouls. However, one Knicks starter is carrying three fouls. The Hawks' lower OREB% of 0.182 compared to the Knicks' 0.250 indicates a potential area for the Knicks to exploit in the second half by crashing the offensive glass.\n\n**4. SECOND-HALF OUTLOOK**\n\nThe Atlanta Hawks are in a commanding position to secure this victory, with the model predicting an 8-point win. Their superior shooting percentages and the solid contribution from their bench have been key. The Hawks will need to continue their offensive efficiency and limit the Knicks' second-chance opportunities to close out the game strong.",
+  "generated_at": "2026-04-24T00:49:04.374588Z"
+}

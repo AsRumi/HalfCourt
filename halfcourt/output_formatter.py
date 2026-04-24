@@ -23,7 +23,12 @@ def _build_markdown(commentary: str, prediction: dict, game_context: dict) -> st
         else game_context["away_team"]
     )
     prob_pct = round(prediction["win_probability"] * 100, 1)
-    margin = abs(prediction["predicted_margin"])
+    raw_margin = prediction["predicted_margin"]
+
+    if raw_margin is None:
+        margin_row = "| Predicted Margin | *Not available for Logistic Regression - use XGBoost or MLP for margin prediction* |\n"
+    else:
+        margin_row = f"| Predicted Margin | {winner_name} by {abs(raw_margin)} pts |\n"
 
     top_features_lines = "\n".join(
         f"- **{f['feature']}** (SHAP: {f['value']:+.4f}) - favors "
@@ -31,7 +36,7 @@ def _build_markdown(commentary: str, prediction: dict, game_context: dict) -> st
         for f in prediction["top_features"]
     )
 
-    live_badge = "**🔴 LIVE PREDICTION**  \n" if game_context.get("is_live") else ""
+    live_badge = "**\U0001f534 LIVE PREDICTION**  \n" if game_context.get("is_live") else ""
 
     header = (
         f"# HalfCourt Report - {game_context['home_team']} vs {game_context['away_team']}\n\n"
@@ -44,7 +49,7 @@ def _build_markdown(commentary: str, prediction: dict, game_context: dict) -> st
         f"|---|---|\n"
         f"| Predicted Winner | **{winner_name}** |\n"
         f"| Win Probability (home) | {prob_pct}% |\n"
-        f"| Predicted Margin | {winner_name} by {margin} pts |\n"
+        f"{margin_row}"
         f"| Confidence | {prediction['confidence_tier'].upper()} |\n\n"
         f"**Top Driving Features:**\n\n{top_features_lines}\n\n"
         f"---\n\n"
