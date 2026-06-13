@@ -1,0 +1,41 @@
+{
+  "game_context": {
+    "home_team": "NYK",
+    "away_team": "SAS",
+    "game_date": "2026-06-11",
+    "is_playoffs": true,
+    "ht_home_pts": 49,
+    "ht_away_pts": 76,
+    "q1_home_pts": 22,
+    "q1_away_pts": 41,
+    "q2_home_pts": 27,
+    "q2_away_pts": 35,
+    "home_star_name": "Jalen Brunson",
+    "away_star_name": "Victor Wembanyama"
+  },
+  "prediction": {
+    "predicted_winner": "away",
+    "win_probability": 0.0104,
+    "predicted_margin": -24,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": -0.4691,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_efg_pct",
+        "value": 0.3241,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "home_bench_ratio",
+        "value": 0.1187,
+        "direction": "favors_home"
+      }
+    ]
+  },
+  "commentary": "**1. SCORE & MOMENTUM**\n\nThe San Antonio Spurs have established a commanding 76-49 lead at halftime, outscoring the Knicks 41-22 in the first quarter. Despite a slight edge in rebound differential for the Knicks, the Spurs have controlled the game's tempo. The momentum has clearly swung in favor of San Antonio, who have executed at an exceptionally high level.\n\n**2. KEY PLAYER ANALYSIS**\n\nJalen Brunson has carried the offensive load for the Knicks, scoring 19 points, but he's received minimal support from his teammates. Victor Wembanyama has contributed 16 points for the Spurs, showcasing his offensive versatility. While Brunson has been productive, the overall offensive efficiency of the Spurs has been the story.\n\n**3. X-FACTORS / FOUL TROUBLE**\n\nThe Spurs' bench has been a significant factor, outscoring the Knicks' bench 22-2. This bench production, coupled with the Spurs' perfect 1.000 free throw percentage, has been crucial. The Knicks have struggled with turnovers, committing seven to the Spurs' two, leading to a stark 9.00 AST/TO ratio for San Antonio.\n\n**4. SECOND-HALF OUTLOOK**\n\nThe San Antonio Spurs are in a dominant position and are poised to secure a 24-point victory. Their exceptional shooting efficiency, highlighted by a 59.6% field goal percentage and 53.8% from three, has overwhelmed the Knicks. The Knicks will need a monumental shift in performance and execution to even make this a contest.",
+  "generated_at": "2026-06-13T19:31:34.170870Z"
+}

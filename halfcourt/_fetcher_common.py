@@ -10,7 +10,8 @@ import logging
 import time
 from pathlib import Path
 
-from nba_api.stats.endpoints import BoxScoreTraditionalV3, BoxScoreSummaryV2
+import requests
+from nba_api.stats.endpoints import BoxScoreTraditionalV3
 
 from halfcourt.exceptions import DataFetchError
 
@@ -148,48 +149,39 @@ def call_boxscore(game_id: str, period: int) -> tuple[list, list]:
     )
 
 
+_CDN_BOXSCORE_URL = (
+    "https://cdn.nba.com/static/json/liveData/boxscore/boxscore_{game_id}.json"
+)
+_CDN_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "Referer": "https://www.nba.com/",
+    "Origin": "https://www.nba.com",
+}
+
+
 def fetch_context_features(game_id: str) -> dict:
     """
     Fetch game date, home/away identities, rest days, and back-to-back flags
-    via BoxScoreSummaryV2.
+    via the NBA CDN live boxscore endpoint (works for both completed and live games).
     """
+    url = _CDN_BOXSCORE_URL.format(game_id=game_id)
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            summary = BoxScoreSummaryV2(game_id=game_id)
-            frames = summary.get_data_frames()
+            r = requests.get(url, headers=_CDN_HEADERS, timeout=10)
+            r.raise_for_status()
+            game = r.json()["game"]
             time.sleep(SLEEP_BETWEEN_CALLS)
 
-            game_summary = frames[0]
-            if game_summary.empty:
-                raise DataFetchError(f"No game summary for {game_id}")
-
-            row = game_summary.iloc[0]
-            game_date = str(row.get("GAME_DATE_EST", ""))[:10]
-
-            line_score = frames[5]
-            if len(line_score) < 2:
-                raise DataFetchError(f"LineScore has <2 rows for {game_id}")
-
-            home_id = int(row["HOME_TEAM_ID"])
-            away_id = int(row["VISITOR_TEAM_ID"])
-
-            home_row = line_score[line_score["TEAM_ID"] == home_id]
-            away_row = line_score[line_score["TEAM_ID"] == away_id]
-
-            if home_row.empty or away_row.empty:
-                raise DataFetchError(
-                    f"Could not match home/away in LineScore for {game_id}"
-                )
-
-            home_abbr = str(home_row.iloc[0].get("TEAM_ABBREVIATION", ""))
-            away_abbr = str(away_row.iloc[0].get("TEAM_ABBREVIATION", ""))
+            home = game["homeTeam"]
+            away = game["awayTeam"]
+            game_date = game.get("gameTimeUTC", "")[:10]
             is_playoffs = 1 if str(game_id)[2] == "4" else 0
 
             return {
-                "home_team_id":   home_id,
-                "home_team_abbr": home_abbr,
-                "away_team_id":   away_id,
-                "away_team_abbr": away_abbr,
+                "home_team_id":   int(home["teamId"]),
+                "home_team_abbr": str(home["teamTricode"]),
+                "away_team_id":   int(away["teamId"]),
+                "away_team_abbr": str(away["teamTricode"]),
                 "game_date":      game_date,
                 "is_playoffs":    is_playoffs,
                 "home_rest_days": 3,
