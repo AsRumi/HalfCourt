@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "DAL",
+    "away_team": "NOP",
+    "game_date": "2026-10-14",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 45,
+    "ht_away_pts": 56,
+    "q1_home_pts": 18,
+    "q1_away_pts": 24,
+    "q2_home_pts": 27,
+    "q2_away_pts": 32,
+    "home_star_name": "John Poulakidas",
+    "away_star_name": "Jeremiah Fears"
+  },
+  "prediction": {
+    "predicted_winner": "away",
+    "win_probability": 0.2617,
+    "predicted_margin": -6,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_pace_est",
+        "value": -0.1746,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "home_ast_to_ratio",
+        "value": -0.1235,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "home_fg_pct",
+        "value": -0.1152,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe New Orleans Pelicans head into the locker room with a commanding 56-45 lead after outscoring Dallas in both opening quarters. New Orleans has dictated the pace, capitalizing on a significant efficiency gap by shooting 46.8% from the field compared to Dallas\u2019s stagnant 36.4%.\n\n2. KEY PLAYER ANALYSIS\nJeremiah Fears has been the catalyst for the Pelicans, contributing 12 points and orchestrating the offense with 5 assists. Conversely, John Poulakidas has struggled to find his rhythm, tallying only 9 points while the Dallas starters have failed to record a single assist.\n\n3. X-FACTORS / FOUL TROUBLE\nBall security is the primary culprit for Dallas, as they have committed 13 turnovers to New Orleans\u2019s 6, leading to a lopsided 1.00 to 2.67 AST/TO ratio. While Dallas has been aggressive on the glass with a +5 rebound differential and 25 bench points, their foul trouble\u2014with five more fouls than the Pelicans\u2014is preventing them from sustaining any defensive momentum.\n\n4. SECOND-HALF OUTLOOK\nThe Pelicans are in total control and will secure a 6-point victory by maintaining their superior 0.543 eFG%. Dallas must drastically improve their 24% shooting from deep and protect the basketball to avoid this inevitable outcome. Expect New Orleans to continue exploiting their clinical passing to close out the game as predicted.",
+  "generated_at": "2026-10-14T01:13:17.563028Z"
+}

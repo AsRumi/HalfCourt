@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "SAS",
+    "away_team": "PHX",
+    "game_date": "2026-10-14",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 60,
+    "ht_away_pts": 49,
+    "q1_home_pts": 22,
+    "q1_away_pts": 23,
+    "q2_home_pts": 38,
+    "q2_away_pts": 26,
+    "home_star_name": "Stephon Castle",
+    "away_star_name": "Jamaree Bouyea"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.8537,
+    "predicted_margin": 9,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": 0.4261,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_ts_pct",
+        "value": -0.3528,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_pace_est",
+        "value": -0.2281,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe San Antonio Spurs head into the locker room with a commanding 60-49 lead after a dominant 38-point second quarter. While Phoenix held a slim edge after the opening frame, the Spurs leveraged a massive 13-point momentum shift to seize control before the break.\n\n2. KEY PLAYER ANALYSIS\nStephon Castle has paced the Spurs' offense, outperforming Jamaree Bouyea in the star-scoring battle with 16 points to Bouyea's 11. Although Bouyea has been the more effective facilitator with five assists compared to Castle's two, the Spurs' superior efficiency is reflected in their 0.596 true shooting percentage.\n\n3. X-FACTORS / FOUL TROUBLE\nSan Antonio is punishing the Suns at the charity stripe, shooting a clinical 94.7% from the free-throw line compared to Phoenix\u2019s 66.7%. Discipline has been a major factor as well, as the Spurs have managed to keep their starters out of foul trouble while the Suns have already seen one starter reach the three-foul threshold.\n\n4. SECOND-HALF OUTLOOK\nThe Spurs are firmly in the driver's seat and will secure a 9-point victory when the final buzzer sounds. By maintaining their edge in effective field goal percentage and capitalizing on their rebounding advantage, San Antonio will successfully close out this contest.",
+  "generated_at": "2026-10-14T01:17:54.488534Z"
+}

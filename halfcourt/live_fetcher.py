@@ -35,7 +35,26 @@ log = logging.getLogger(__name__)
 
 LIVE_RAW_DIR = Path("data/raw/live")
 _CDN_URL = "https://cdn.nba.com/static/json/liveData/boxscore/boxscore_{game_id}.json"
-_HEADERS = {"User-Agent": "Mozilla/5.0"}
+# Since 2026-06-16 Akamai returns 403 unless the request carries a full Chrome
+# header set; UA + Referer alone is not enough.
+_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+    ),
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Referer": "https://www.nba.com/",
+    "Origin": "https://www.nba.com",
+    "sec-ch-ua": '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": '"Windows"',
+    "Sec-Fetch-Dest": "empty",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Site": "same-site",
+    "Connection": "keep-alive",
+}
 
 
 def _cache_path(game_id: str) -> Path:
@@ -152,8 +171,9 @@ def _build_halftime_dict(game: dict, game_id: str) -> dict:
 
     is_playoffs = 1 if str(game_id)[2] == "4" else 0
 
-    # game_date from gameTimeUTC: "2026-04-21T23:00:00Z" → "2026-04-21"
-    game_date = game.get("gameTimeUTC", "")[:10]
+    # Use the Eastern Time date (NBA's official game date). gameTimeUTC rolls
+    # evening tip-offs over to the next day, e.g. 8 PM ET Oct 14 → Oct 15 UTC.
+    game_date = (game.get("gameEt") or game.get("gameTimeUTC", ""))[:10]
 
     final = {
         "home_team_id":   home_id,

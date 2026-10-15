@@ -165,7 +165,7 @@ Expected accuracy on the test set is around 62-67% for all three models. NBA hal
 
 ## Output
 
-Reports are written to `reports/` as both `.md` and `.json`. The filename format is `{date}_{home}_vs_{away}.md`.
+Reports are written to `reports/` as both `.md` and `.json`. They are grouped into one folder per game date, named `{away}_at_{home}`, e.g. `reports/2026-10-14/CHA_at_BOS.md`.
 
 The markdown report contains:
 

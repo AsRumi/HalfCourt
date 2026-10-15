@@ -1,0 +1,41 @@
+{
+  "game_context": {
+    "home_team": "OKC",
+    "away_team": "IND",
+    "game_date": "2026-10-14",
+    "is_playoffs": false,
+    "ht_home_pts": 59,
+    "ht_away_pts": 61,
+    "q1_home_pts": 25,
+    "q1_away_pts": 33,
+    "q2_home_pts": 34,
+    "q2_away_pts": 28,
+    "home_star_name": "Shai Gilgeous-Alexander",
+    "away_star_name": "Tyrese Haliburton"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.7108,
+    "predicted_margin": 4,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "home_oreb_pct",
+        "value": 0.4787,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "reb_diff",
+        "value": -0.1166,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_to",
+        "value": 0.081,
+        "direction": "favors_home"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nIndiana holds a slim 61-59 lead heading into the locker room, but Oklahoma City has successfully clawed back from an eight-point first-quarter deficit. OKC\u2019s 34-point second quarter ignited a 14-point momentum shift, fueled by superior efficiency with a 0.500 FG% and a 0.591 eFG%.\n\n2. KEY PLAYER ANALYSIS\nTyrese Haliburton has been the primary engine for the Pacers, pacing all scorers with 24 points. Shai Gilgeous-Alexander is keeping the Thunder within striking distance, contributing 15 points and 5 assists while maintaining a higher offensive efficiency than his counterpart.\n\n3. X-FACTORS / FOUL TROUBLE\nThe battle on the glass is the defining story, as Indiana\u2019s 0.304 OREB% has created a significant -11 rebound differential that keeps them in front. However, OKC is capitalizing on Indiana's 12 turnovers and dominating the bench battle with 22 points compared to just 13 from the Pacers' reserves.\n\n4. SECOND-HALF OUTLOOK\nOklahoma City will secure a 4-point victory by leveraging their superior shooting percentages and bench production. As the Thunder continue to pressure the ball to force turnovers, their offensive efficiency will ultimately overcome the rebounding disparity to close out the win.",
+  "generated_at": "2026-10-14T20:25:52.592082Z"
+}

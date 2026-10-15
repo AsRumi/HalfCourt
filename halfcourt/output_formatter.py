@@ -2,7 +2,8 @@
 output_formatter.py
 
 Assembles the final report from commentary and prediction data.
-Writes JSON and/or Markdown files to the reports/ directory based on config.
+Writes JSON and/or Markdown files to reports/{game_date}/{AWAY}_at_{HOME}.{ext}
+based on config.
 """
 
 import json
@@ -68,11 +69,12 @@ def _build_json(commentary: str, prediction: dict, game_context: dict) -> dict:
     }
 
 
-def _report_filename(game_context: dict, ext: str) -> str:
-    date = game_context.get("game_date", "unknown").replace("-", "")
+def _report_relpath(game_context: dict, ext: str) -> str:
+    """Return '{game_date}/{AWAY}_at_{HOME}.{ext}', relative to reports_dir."""
+    date = game_context.get("game_date") or "unknown_date"
     home = game_context.get("home_team", "HOME").replace(" ", "_")
     away = game_context.get("away_team", "AWAY").replace(" ", "_")
-    return f"{date}_{home}_vs_{away}.{ext}"
+    return os.path.join(date, f"{away}_at_{home}.{ext}")
 
 
 def _write_file(path: str, content: str) -> None:
@@ -104,12 +106,12 @@ def format_report(commentary: str, prediction: dict, game_context: dict) -> dict
     json_data = _build_json(commentary, prediction, game_context)
 
     if fmt in ("markdown", "both"):
-        path = os.path.join(reports_dir, _report_filename(game_context, "md"))
+        path = os.path.join(reports_dir, _report_relpath(game_context, "md"))
         _write_file(path, markdown)
         print(f"Markdown report -> {path}")
 
     if fmt in ("json", "both"):
-        path = os.path.join(reports_dir, _report_filename(game_context, "json"))
+        path = os.path.join(reports_dir, _report_relpath(game_context, "json"))
         _write_file(path, json.dumps(json_data, indent=2))
         print(f"JSON report     -> {path}")
 

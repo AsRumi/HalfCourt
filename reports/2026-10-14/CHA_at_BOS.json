@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "BOS",
+    "away_team": "CHA",
+    "game_date": "2026-10-14",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 54,
+    "ht_away_pts": 44,
+    "q1_home_pts": 28,
+    "q1_away_pts": 20,
+    "q2_home_pts": 26,
+    "q2_away_pts": 24,
+    "home_star_name": "Derrick White",
+    "away_star_name": "Royce O'Neale"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.9529,
+    "predicted_margin": 14,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": 0.718,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_ts_pct",
+        "value": -0.3163,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "home_star_foul_flag",
+        "value": -0.2711,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nBoston heads into the locker room with a commanding 54-44 lead, having controlled the pace since the opening tip. While Charlotte kept the second quarter competitive, their inability to overcome a sluggish start has left them trailing by double digits. Boston\u2019s efficiency has been the story, as they maintain a significant edge in eFG% at .550 compared to Charlotte\u2019s .466.\n\n2. KEY PLAYER ANALYSIS\nDerrick White is dictating the tempo for Boston, pouring in 17 points to anchor the home team\u2019s offensive production. In contrast, Royce O'Neale has struggled to find his rhythm, contributing only 9 points for the Hornets. Both stars have been limited to 2 assists each, but White\u2019s scoring efficiency has been the primary separator in this matchup.\n\n3. X-FACTORS / FOUL TROUBLE\nThe disparity in ball security is staggering, with Charlotte committing 15 turnovers compared to just 4 for Boston. This has resulted in a lopsided AST/TO ratio of 4.25 for the Celtics against a dismal 0.60 for the Hornets. Both teams have one starter currently sitting with 3 fouls, though Derrick White\u2019s foul trouble remains a minor concern for Boston\u2019s rotation.\n\n4. SECOND-HALF OUTLOOK\nBoston is firmly in control and will secure a 14-point victory when the final buzzer sounds. The Hornets must drastically improve their 0.364 shooting percentage if they hope to narrow the gap, but the Celtics' superior efficiency will prove too much to overcome. Expect Boston to maintain their momentum and close out this win with ease.",
+  "generated_at": "2026-10-15T00:59:49.073314Z"
+}

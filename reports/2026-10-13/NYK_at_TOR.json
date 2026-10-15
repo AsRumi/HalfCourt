@@ -1,0 +1,41 @@
+{
+  "game_context": {
+    "home_team": "TOR",
+    "away_team": "NYK",
+    "game_date": "2026-10-13",
+    "is_playoffs": false,
+    "ht_home_pts": 86,
+    "ht_away_pts": 47,
+    "q1_home_pts": 42,
+    "q1_away_pts": 22,
+    "q2_home_pts": 44,
+    "q2_away_pts": 25,
+    "home_star_name": "Kawhi Leonard",
+    "away_star_name": "Miles McBride"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.9992,
+    "predicted_margin": 34,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_ft_pct",
+        "value": 0.3168,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_ts_pct",
+        "value": -0.1937,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_3p_pct",
+        "value": 0.135,
+        "direction": "favors_home"
+      }
+    ]
+  },
+  "commentary": "### 1. SCORE & MOMENTUM\nThe Raptors have completely dismantled the Knicks, heading into the locker room with a commanding 86-47 lead. Toronto\u2019s offensive efficiency has been clinical, fueled by a scorching 0.577 field goal percentage and a massive 13-rebound advantage. New York has been unable to keep pace, struggling to find any rhythm while being outscored by 20 points in the first quarter and 19 in the second.\n\n### 2. KEY PLAYER ANALYSIS\nKawhi Leonard is dictating the tempo, pouring in 21 points to anchor a Raptors offense that is operating at a 0.712 true shooting percentage. In contrast, Miles McBride has been stifled, limited to just 8 points on a night where the Knicks are shooting a dismal 0.222 from beyond the arc. While McBride has managed 3 assists, Leonard\u2019s scoring efficiency has been the primary engine behind Toronto's dominant first-half performance.\n\n### 3. X-FACTORS / FOUL TROUBLE\nToronto\u2019s discipline has been a major differentiator, as they have committed only 2 turnovers compared to New York\u2019s 11. The Knicks are currently hampered by foul trouble, with three starters already saddled with 3+ fouls, including McBride. Meanwhile, Toronto\u2019s bench has provided a significant boost, contributing 25 points to keep the pressure on the visitors.\n\n### 4. SECOND-HALF OUTLOOK\nThe Raptors are firmly in control, and they will cruise to a victory with a predicted final margin of 34 points. New York\u2019s inability to hit free throws\u2014shooting a meager 0.467\u2014will prevent any meaningful comeback attempt. Expect Toronto to maintain their high-percentage shooting and defensive intensity to close out this lopsided contest.",
+  "generated_at": "2026-10-14T20:18:47.201733Z"
+}

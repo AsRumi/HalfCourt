@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "MIA",
+    "away_team": "BKN",
+    "game_date": "2026-10-14",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 69,
+    "ht_away_pts": 66,
+    "q1_home_pts": 35,
+    "q1_away_pts": 29,
+    "q2_home_pts": 34,
+    "q2_away_pts": 37,
+    "home_star_name": "Giannis Antetokounmpo",
+    "away_star_name": "Michael Porter Jr."
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.7038,
+    "predicted_margin": 4,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": 0.4595,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "home_pace_est",
+        "value": 0.2505,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "home_efg_pct",
+        "value": 0.1117,
+        "direction": "favors_home"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe Miami Heat hold a 69-66 lead heading into the locker room, despite a second-quarter surge from Brooklyn that saw the Nets outscore the hosts 37-34. Miami established an early cushion with a 35-point first quarter, though a -9 momentum shift suggests the Nets have successfully clawed their way back into contention.\n\n2. KEY PLAYER ANALYSIS\nGiannis Antetokounmpo and Michael Porter Jr. are locked in a dead heat, each contributing 18 points to their respective teams. While their scoring output is identical, Antetokounmpo has been the superior playmaker, recording 5 assists compared to zero for Porter Jr.\n\n3. X-FACTORS / FOUL TROUBLE\nMiami\u2019s dominance on the glass is a major differentiator, as they hold a +8 rebound differential and a 0.318 offensive rebounding percentage. While Brooklyn\u2019s bench has provided a spark with 20 points, the Nets are struggling to contain Miami\u2019s efficiency, as the Heat are shooting 58.3% from the field with a superior 0.635 eFG%.\n\n4. SECOND-HALF OUTLOOK\nMiami will secure a 4-point victory by maintaining their high-efficiency shooting and leveraging their significant edge in effective field goal percentage. Expect the Heat to lean on their superior interior presence to offset Brooklyn's 41.7% shooting from beyond the arc.",
+  "generated_at": "2026-10-15T01:04:02.176606Z"
+}

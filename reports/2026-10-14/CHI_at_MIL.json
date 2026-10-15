@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "MIL",
+    "away_team": "CHI",
+    "game_date": "2026-10-14",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 39,
+    "ht_away_pts": 62,
+    "q1_home_pts": 15,
+    "q1_away_pts": 24,
+    "q2_home_pts": 24,
+    "q2_away_pts": 38,
+    "home_star_name": "Cormac Ryan",
+    "away_star_name": "Jalen Smith"
+  },
+  "prediction": {
+    "predicted_winner": "away",
+    "win_probability": 0.039,
+    "predicted_margin": -17,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": 0.3141,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "home_3p_pct",
+        "value": -0.2707,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "home_oreb_pct",
+        "value": -0.2521,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe Chicago Bulls have dismantled the Milwaukee defense, heading into the locker room with a commanding 62-39 lead. Chicago\u2019s offensive efficiency is staggering, evidenced by a 0.558 eFG% and a 0.455 clip from beyond the arc. Milwaukee\u2019s momentum is in a deep hole at -5, exacerbated by a disastrous 17 turnovers that have fueled the Bulls' transition game.\n\n2. KEY PLAYER ANALYSIS\nJalen Smith has paced the Bulls with 11 points, providing a steady hand to maintain Chicago's double-digit cushion. Cormac Ryan is doing his best to keep Milwaukee afloat with 10 points, but he lacks support as the Bucks' starters have failed to record a single assist. With Milwaukee shooting a dismal 0.302 from the floor, Ryan needs a historic second half to bridge this massive gap.\n\n3. X-FACTORS / FOUL TROUBLE\nMilwaukee\u2019s inability to protect the ball is the primary driver of this blowout, as their 0.59 AST/TO ratio is being dwarfed by Chicago\u2019s 1.55. While the Bucks are winning the battle on the glass with a 0.393 OREB% and a +3 rebound differential, these second-chance opportunities are being squandered by poor shooting. Both teams are managing foul trouble, with one starter on each side already sitting at three personal fouls.\n\n4. SECOND-HALF OUTLOOK\nThe Bulls are firmly in control and will secure a 17-point victory when the final buzzer sounds. Milwaukee\u2019s 0.200 shooting from three-point range offers no path to a comeback against a Chicago squad that is capitalizing on every mistake. Expect Chicago to maintain their high-percentage shot selection and cruise to a comfortable win.",
+  "generated_at": "2026-10-15T01:20:51.946771Z"
+}

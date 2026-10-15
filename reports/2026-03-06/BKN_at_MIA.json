@@ -1,0 +1,41 @@
+{
+  "game_context": {
+    "home_team": "MIA",
+    "away_team": "BKN",
+    "game_date": "2026-03-06",
+    "is_playoffs": false,
+    "ht_home_pts": 60,
+    "ht_away_pts": 56,
+    "q1_home_pts": 31,
+    "q1_away_pts": 26,
+    "q2_home_pts": 29,
+    "q2_away_pts": 30,
+    "home_star_name": "Bam Adebayo",
+    "away_star_name": "Michael Porter Jr."
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.768,
+    "predicted_margin": 6,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "home_star_foul_flag",
+        "value": -0.1775,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_fg_pct",
+        "value": -0.1747,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_3p_pct",
+        "value": -0.1242,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe Miami Heat head into the locker room with a 60-56 lead, fueled by a strong 31-point opening quarter. While Brooklyn has been more efficient from the field, Miami\u2019s ability to protect the basketball has been the difference-maker. The Heat have forced 12 turnovers compared to their own six, maintaining a 2.50 assist-to-turnover ratio that keeps them in control despite a -6 momentum shift.\n\n2. KEY PLAYER ANALYSIS\nBam Adebayo has set the tone for Miami, contributing 13 points and two assists to anchor the offense. Across the floor, Michael Porter Jr. has kept Brooklyn within striking distance by posting 11 points and one assist. Both stars are playing pivotal roles, though Adebayo is currently navigating foul trouble that could impact his availability in the second half.\n\n3. X-FACTORS / FOUL TROUBLE\nMiami\u2019s bench has been a massive advantage, outscoring Brooklyn\u2019s reserves 24-14 and providing a crucial spark. However, discipline is a concern for the Heat, as two starters have already reached three fouls, including Adebayo. Brooklyn is capitalizing on their superior shooting, boasting a 53.8% clip from deep and a 63.5% true shooting percentage, which keeps the pressure on Miami\u2019s defense.\n\n4. SECOND-HALF OUTLOOK\nThe Heat will secure a 6-point victory by continuing to leverage their superior ball security and bench depth. While Brooklyn\u2019s efficiency from the perimeter remains a threat, Miami\u2019s disciplined playmaking will ultimately close the door. Expect the Heat to lean on their reserves to maintain the lead as they close out this win.",
+  "generated_at": "2026-10-14T23:22:43.906284Z"
+}

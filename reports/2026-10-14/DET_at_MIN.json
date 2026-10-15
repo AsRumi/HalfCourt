@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "MIN",
+    "away_team": "DET",
+    "game_date": "2026-10-14",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 58,
+    "ht_away_pts": 65,
+    "q1_home_pts": 38,
+    "q1_away_pts": 29,
+    "q2_home_pts": 20,
+    "q2_away_pts": 36,
+    "home_star_name": "Jaden McDaniels",
+    "away_star_name": "Jalen Duren"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.6033,
+    "predicted_margin": 2,
+    "confidence_tier": "medium",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": -0.5884,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_ts_pct",
+        "value": 0.1801,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_pace_est",
+        "value": -0.1086,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nDetroit heads into the locker room with a 65-58 lead, fueled by a dominant 36-point second quarter that completely erased Minnesota\u2019s early nine-point advantage. The Timberwolves are reeling from a -25 momentum shift, struggling to contain an efficient Pistons offense that is shooting 57.9% from the field.\n\n2. KEY PLAYER ANALYSIS\nJalen Duren has been the primary catalyst for Detroit, posting 24 points to outpace Jaden McDaniels, who has contributed 12 points for Minnesota. While McDaniels is fighting to keep the Timberwolves competitive, Duren\u2019s interior presence has been instrumental in Detroit\u2019s superior 0.632 effective field goal percentage.\n\n3. X-FACTORS / FOUL TROUBLE\nMinnesota is currently hampered by 13 turnovers and a poor 0.92 assist-to-turnover ratio, which has prevented them from capitalizing on their perfect 100% free-throw shooting. Discipline is becoming a major concern, as the Timberwolves have two starters with three or more fouls compared to just one for the Pistons, contributing to a +5 foul differential that favors Detroit.\n\n4. SECOND-HALF OUTLOOK\nDespite the current deficit, Minnesota will rally to secure a 2-point victory by the final buzzer. The Timberwolves' bench, which has already provided 18 points, will be the deciding factor in overcoming Detroit's shooting efficiency as they tighten their defensive rotation to close the gap.",
+  "generated_at": "2026-10-15T01:21:42.728538Z"
+}

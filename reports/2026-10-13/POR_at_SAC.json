@@ -1,0 +1,41 @@
+{
+  "game_context": {
+    "home_team": "SAC",
+    "away_team": "POR",
+    "game_date": "2026-10-14",
+    "is_playoffs": false,
+    "ht_home_pts": 39,
+    "ht_away_pts": 66,
+    "q1_home_pts": 22,
+    "q1_away_pts": 33,
+    "q2_home_pts": 17,
+    "q2_away_pts": 33,
+    "home_star_name": "Keegan Murray",
+    "away_star_name": "Deni Avdija"
+  },
+  "prediction": {
+    "predicted_winner": "away",
+    "win_probability": 0.0389,
+    "predicted_margin": -17,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "home_3p_pct",
+        "value": -0.3086,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_efg_pct",
+        "value": 0.251,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_pace_est",
+        "value": -0.2023,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nPortland has dismantled Sacramento through two quarters, heading into the locker room with a commanding 66-39 lead. The Blazers\u2019 offensive efficiency is staggering, as they have outpaced the Kings in every shooting metric, highlighted by a dominant 0.641 eFG% compared to Sacramento\u2019s dismal 0.304.\n\n2. KEY PLAYER ANALYSIS\nDeni Avdija has outperformed Keegan Murray in this star-studded matchup, contributing 13 points and 3 assists to Murray\u2019s 10 points and 0 assists. While Murray has struggled to find a rhythm, Avdija\u2019s playmaking has been instrumental in Portland maintaining a superior 3.33 AST/TO ratio.\n\n3. X-FACTORS / FOUL TROUBLE\nPortland\u2019s perimeter shooting is the story of the half, as they are hitting 42.1% from deep while holding Sacramento to a frigid 16.7%. Despite the Kings holding a +7 foul differential and a slight edge in offensive rebounding at 0.324 OREB%, they have failed to capitalize on these extra opportunities.\n\n4. SECOND-HALF OUTLOOK\nPortland is firmly in control and will cruise to a 17-point victory. The Kings have no answer for the Blazers' 0.538 FG% and will be unable to close the massive 27-point halftime deficit.",
+  "generated_at": "2026-10-14T20:45:33.691953Z"
+}
