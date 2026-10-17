@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "PHX",
+    "away_team": "UTA",
+    "game_date": "2026-10-16",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 65,
+    "ht_away_pts": 59,
+    "q1_home_pts": 30,
+    "q1_away_pts": 31,
+    "q2_home_pts": 35,
+    "q2_away_pts": 28,
+    "home_star_name": "Devin Booker",
+    "away_star_name": "Lauri Markkanen"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.8473,
+    "predicted_margin": 8,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": 0.4597,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_oreb_pct",
+        "value": -0.1712,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_star1_pts",
+        "value": 0.1669,
+        "direction": "favors_home"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe Phoenix Suns hold a 65-59 lead over the Utah Jazz at halftime. After trailing by one point following the first quarter, Phoenix seized control in the second frame with a 35-28 surge, generating an 8-point momentum shift. \n\n2. KEY PLAYER ANALYSIS\nUtah star Lauri Markkanen leads all featured scorers with 15 points, while Phoenix star Devin Booker has contributed 12 points and 4 assists. Booker's playmaking has helped offset his scoring deficit against Markkanen, while Markkanen received zero assists in the first half.\n\n3. X-FACTORS / FOUL TROUBLE\nDespite Utah shooting a higher overall field goal percentage at 0.463 compared to Phoenix's 0.455, the Suns are dominating from beyond the arc by shooting 0.476 on three-pointers. Phoenix is also capitalizing on second-chance opportunities with a 0.273 offensive rebounding percentage, contributing to a plus-5 rebound differential. Utah currently has two starters with three or more fouls, compared to just one for Phoenix.\n\n4. SECOND-HALF OUTLOOK\nThe Phoenix Suns are firmly on track to secure a victory, backed by a strong offensive showing that includes a 0.626 true shooting percentage and 22 bench points. Phoenix will control the remainder of this matchup to finish ahead by a predicted 8-point margin.",
+  "generated_at": "2026-10-17T03:16:45.311948Z"
+}

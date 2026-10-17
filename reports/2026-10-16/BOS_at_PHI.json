@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "PHI",
+    "away_team": "BOS",
+    "game_date": "2026-10-16",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 60,
+    "ht_away_pts": 58,
+    "q1_home_pts": 28,
+    "q1_away_pts": 34,
+    "q2_home_pts": 32,
+    "q2_away_pts": 24,
+    "home_star_name": "Joel Embiid",
+    "away_star_name": "Hugo Gonz\u00e1lez"
+  },
+  "prediction": {
+    "predicted_winner": "away",
+    "win_probability": 0.3316,
+    "predicted_margin": -4,
+    "confidence_tier": "medium",
+    "top_features": [
+      {
+        "feature": "away_bench_ratio",
+        "value": -0.4675,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_efg_pct",
+        "value": -0.3102,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_fg_pct",
+        "value": 0.2805,
+        "direction": "favors_home"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe Philadelphia 76ers hold a narrow 60-58 lead at the break after erasing an early deficit with a 32-24 second-quarter surge. Philadelphia generated a massive +14 momentum shift in the first half to flip the script on Boston. Despite trailing at intermission, the Boston Celtics remain positioned to execute their game plan down the stretch.\n\n2. KEY PLAYER ANALYSIS\nJoel Embiid leads the 76ers with 16 points and 2 assists, anchoring the home team's offensive efficiency while shooting 80.8% from the free-throw line. Hugo Gonz\u00e1lez counters for Boston with 15 points and 3 assists, keeping the Celtics within striking distance. Both stars avoided early foul trouble, committing zero fouls as they carried their respective offenses through two quarters.\n\n3. X-FACTORS / FOUL TROUBLE\nThe Celtics' bench completely dominated the first half, pouring in 44 bench points for an elite 0.759 bench ratio compared to just 10 points for Philadelphia's reserves. Boston capitalized on a +3 rebound differential and a 0.312 offensive rebound percentage despite shooting just 35.1% from the field and 28.6% from deep. Meanwhile, Philadelphia struggled heavily from beyond the arc at 17.6% and committed 11 turnovers, offsetting their 47.4% overall field goal shooting.\n\n4. SECOND-HALF OUTLOOK\nThe Boston Celtics are projected to complete their comeback and defeat the Philadelphia 76ers by a final margin of 4 points. Boston's overwhelming bench production and superior ball control with only 7 turnovers will wear down Philadelphia over the final two quarters. Look for the Celtics to leverage their interior rebounding edge and close out the victory on the road.",
+  "generated_at": "2026-10-17T00:16:00.175126Z"
+}

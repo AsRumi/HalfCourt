@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "GSW",
+    "away_team": "POR",
+    "game_date": "2026-10-16",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 67,
+    "ht_away_pts": 58,
+    "q1_home_pts": 35,
+    "q1_away_pts": 26,
+    "q2_home_pts": 32,
+    "q2_away_pts": 32,
+    "home_star_name": "Georges Niang",
+    "away_star_name": "Damian Lillard"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.8696,
+    "predicted_margin": 9,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": 0.3659,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_efg_pct",
+        "value": -0.2272,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "home_ts_pct",
+        "value": 0.2185,
+        "direction": "favors_home"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe Golden State Warriors head into the locker room with a 67-58 lead over the Portland Trail Blazers. Golden State set the tone immediately with a dominant 35-26 opening quarter before matching Portland blow-for-blow with 32 points apiece in the second frame. \n\n2. KEY PLAYER ANALYSIS\nDamian Lillard is carrying the offensive load for Portland with 18 points and 1 assist, while Georges Niang has chipped in 13 points for the Warriors. Despite Lillard's output, Golden State's supporting cast is vastly outplaying Portland's stars through the first two quarters.\n\n3. X-FACTORS / FOUL TROUBLE\nThe Warriors are completely dominating the game on the margins, highlighted by a staggering 36-7 advantage in bench points and a +6 rebounding differential. Golden State is also punishing Portland on the offensive glass with a 0.391 OREB%, while Portland is struggling to take care of the ball with 10 turnovers leading to a poor 0.90 AST/TO ratio. \n\n4. SECOND-HALF OUTLOOK\nThe Warriors are locked in with an 87.0% win probability and are projected to close this out with a 9-point victory. To secure the win, Golden State must maintain their 0.375 three-point shooting efficiency and keep exploiting Portland's weaker 0.294 perimeter defense.",
+  "generated_at": "2026-10-17T03:19:49.177527Z"
+}

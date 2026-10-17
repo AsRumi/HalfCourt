@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "DAL",
+    "away_team": "ATL",
+    "game_date": "2026-10-16",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 54,
+    "ht_away_pts": 73,
+    "q1_home_pts": 34,
+    "q1_away_pts": 39,
+    "q2_home_pts": 20,
+    "q2_away_pts": 34,
+    "home_star_name": "Cooper Flagg",
+    "away_star_name": "Jalen Johnson"
+  },
+  "prediction": {
+    "predicted_winner": "away",
+    "win_probability": 0.121,
+    "predicted_margin": -10,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_efg_pct",
+        "value": 0.2072,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "home_fg_pct",
+        "value": -0.1682,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_pace_est",
+        "value": -0.1556,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe Atlanta Hawks hold a commanding 73-54 lead over the Dallas Mavericks at the break, powered by a dominant 34-20 second-quarter surge. Atlanta completely controlled the opening half's momentum, which resulted in a harsh -9 momentum shift for Dallas. The Mavericks are left searching for answers after being outscored in both quarters.\n\n2. KEY PLAYER ANALYSIS\nAtlanta star Jalen Johnson has outpaced the competition with 16 points, while adding 3 assists to orchestrate the offense. Dallas star Cooper Flagg has chipped in 12 points and recorded 4 assists to keep the Mavericks within striking distance. Both star players managed to avoid early foul trouble, keeping their respective teams afloat through two quarters.\n\n3. X-FACTORS / FOUL TROUBLE\nShooting efficiency is the defining X-factor, as Atlanta's scorching 0.513 field goal percentage and elite 0.641 effective field goal percentage have overwhelmed the defense. Dallas is struggling mightily to keep pace, shooting just 0.377 from the field and converting a dismal 0.583 from the free-throw line. Meanwhile, the bench battle heavily favors the visitors, with Atlanta reserves outscoring the Dallas bench 25 to 17.\n\n4. SECOND-HALF OUTLOOK\nThe analytics and first-half performance point firmly toward an Atlanta victory, with the model projecting a final margin of 10 points for the Hawks. Dallas faces an uphill battle to overcome a 19-point halftime deficit while shooting only 0.333 from beyond the arc. To alter this trajectory, the Mavericks must drastically improve their shooting numbers and find a way to slow down Atlanta's high-efficiency attack.",
+  "generated_at": "2026-10-17T01:16:22.520002Z"
+}

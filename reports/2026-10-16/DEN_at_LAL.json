@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "LAL",
+    "away_team": "DEN",
+    "game_date": "2026-10-16",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 55,
+    "ht_away_pts": 62,
+    "q1_home_pts": 22,
+    "q1_away_pts": 36,
+    "q2_home_pts": 33,
+    "q2_away_pts": 26,
+    "home_star_name": "Luka Don\u010di\u0107",
+    "away_star_name": "Nikola Joki\u0107"
+  },
+  "prediction": {
+    "predicted_winner": "away",
+    "win_probability": 0.2977,
+    "predicted_margin": -4,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": -0.6727,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_ts_pct",
+        "value": 0.2239,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "home_ft_pct",
+        "value": -0.1666,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe Denver Nuggets hold a 62-55 halftime lead over the Los Angeles Lakers after exploding for a 36-point first quarter. Los Angeles battled back by outscoring Denver 33-26 in the second frame, backed by a significant +21 momentum shift. However, Denver's scorching 59.0% field goal percentage keeps them firmly in control at the break.\n\n2. KEY PLAYER ANALYSIS\nSuperstars Luka Don\u010di\u0107 and Nikola Joki\u0107 are matching each other blow for blow with 15 points apiece at halftime. While Don\u010di\u0107 paces the Lakers' offense, Joki\u0107 is orchestrating Denver's clinical attack with 6 assists compared to just 2 for the LAL star. Both marquee players have managed their discipline well, avoiding foul trouble through the first two quarters.\n\n3. X-FACTORS / FOUL TROUBLE\nDenver's staggering 66.7% effective field goal percentage and 2.00 assist-to-turnover ratio are proving to be the difference-makers in this matchup. The Lakers are winning the margins on the glass with a +1 rebound differential and a 27.3% offensive rebound rate, but 10 turnovers are holding them back. Both teams currently have one starter playing through three personal fouls as the second half approaches.\n\n4. SECOND-HALF OUTLOOK\nThe Denver Nuggets will close out this victory and defeat the Los Angeles Lakers by 4 points. To secure the win, Denver must maintain their blistering shooting efficiency and limit Los Angeles' second-chance opportunities. The Lakers need their supporting cast to build on their 12 bench points and tighten up ball security to overcome the deficit.",
+  "generated_at": "2026-10-17T03:52:22.709468Z"
+}

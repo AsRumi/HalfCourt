@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "ORL",
+    "away_team": "MIA",
+    "game_date": "2026-10-16",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 70,
+    "ht_away_pts": 65,
+    "q1_home_pts": 34,
+    "q1_away_pts": 36,
+    "q2_home_pts": 36,
+    "q2_away_pts": 29,
+    "home_star_name": "Paolo Banchero",
+    "away_star_name": "Andrew Wiggins"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.7523,
+    "predicted_margin": 5,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": 0.2845,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_ts_pct",
+        "value": -0.2388,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_efg_pct",
+        "value": -0.205,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nOrlando holds a 70-65 lead at the break after outscoring Miami 36-29 in a dominant second quarter. The Magic grabbed the game's momentum with 9 momentum shifts, erasing an early first-quarter deficit where Miami put up 36 points. Orlando's offensive surge in the second frame has them firmly in control heading into the locker room.\n\n2. KEY PLAYER ANALYSIS\nMagic star Paolo Banchero leads the way with 16 points and 4 assists, anchoring the Orlando offense with elite efficiency. Heat star Andrew Wiggins has chipped in 13 points, but struggles to generate playmaking with only 1 assist at the half. Banchero's dual-threat production as both a scorer and facilitator has given the Magic a crucial edge over Wiggins and the Heat.\n\n3. X-FACTORS / FOUL TROUBLE\nOrlando's bench has provided a massive spark, outproducing Miami's reserves with 27 bench points on a 0.386 bench ratio. Shooting efficiency dictates the margin, as the Magic boast a 0.585 eFG% and 0.618 TS% compared to Miami's 0.519 eFG% and 0.550 TS%. Discipline will be a storyline to watch in the second half, with Orlando having 2 starters facing 3-plus fouls against Miami's 1.\n\n4. SECOND-HALF OUTLOOK\nOrlando is positioned to close this game out, backed by a 75.2% win probability and a projected 5-point victory. To secure the win, the Magic must maintain their 48.9% shooting clip from the field and 39.1% mark from beyond the arc. Miami needs to drastically improve their 29.6% three-point shooting and defensive rotations to overcome Orlando's efficiency.",
+  "generated_at": "2026-10-17T00:16:32.708673Z"
+}

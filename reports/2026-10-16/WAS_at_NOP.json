@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "NOP",
+    "away_team": "WAS",
+    "game_date": "2026-10-16",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 56,
+    "ht_away_pts": 51,
+    "q1_home_pts": 23,
+    "q1_away_pts": 17,
+    "q2_home_pts": 33,
+    "q2_away_pts": 34,
+    "home_star_name": "Saddiq Bey",
+    "away_star_name": "AJ Dybantsa"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.7402,
+    "predicted_margin": 5,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": 0.5898,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_ts_pct",
+        "value": -0.339,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "home_bench_ratio",
+        "value": -0.2021,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe New Orleans Pelicans hold a 56-51 lead over the Washington Wizards at the halftime break after outscoring the visitors 23-17 in the opening quarter. Washington fought back with a 34-point second frame, though the Pelicans maintain control of the scoreboard. New Orleans enters the locker room despite dealing with a -7 momentum shift during the first two quarters.\n\n2. KEY PLAYER ANALYSIS\nPelicans star Saddiq Bey leads the charge with 13 points, matching up against Wizards star AJ Dybantsa, who tallied 12 points in the first half. Both players anchored their respective offenses while recording zero assists through the first two quarters. Bey and Dybantsa have set the primary scoring tone for their teams as the focal points of the offensive attacks.\n\n3. X-FACTORS / FOUL TROUBLE\nNew Orleans is dominating the game through its bench production, racking up 22 bench points for a commanding 0.393 bench ratio compared to just 8 points for Washington. The Wizards are shooting a cold 0.356 from the field and 0.411 in effective field goal percentage, handing a massive advantage to the Pelicans. Meanwhile, New Orleans must monitor discipline with an 8-foul differential and one starter carrying three fouls.\n\n4. SECOND-HALF OUTLOOK\nThe New Orleans Pelicans will close out a victory over the Washington Wizards, securing a win by a projected margin of 5 points. New Orleans owns a strong 0.511 field goal percentage and a 1.70 assist-to-turnover ratio that will steady their offense down the stretch. Expect the Pelicans to rely on their superior efficiency and bench scoring to fend off the Wizards over the final two quarters.",
+  "generated_at": "2026-10-17T01:17:07.055507Z"
+}

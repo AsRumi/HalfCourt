@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "NYK",
+    "away_team": "TOR",
+    "game_date": "2026-10-15",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 63,
+    "ht_away_pts": 58,
+    "q1_home_pts": 35,
+    "q1_away_pts": 32,
+    "q2_home_pts": 28,
+    "q2_away_pts": 26,
+    "home_star_name": "Mikal Bridges",
+    "away_star_name": "Scottie Barnes"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.8104,
+    "predicted_margin": 7,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": 0.2851,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_ts_pct",
+        "value": -0.2428,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_star_foul_flag",
+        "value": -0.204,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe Knicks head into the locker room with a 63-58 lead, having outscored the Raptors in both the first and second quarters. New York\u2019s efficiency is the clear driver, as they are shooting 54.5% from the field and 47.1% from beyond the arc compared to Toronto\u2019s 46.7% and 36.4% respectively.\n\n2. KEY PLAYER ANALYSIS\nScottie Barnes is narrowly edging Mikal Bridges in the individual scoring battle with 15 points to Bridges' 14. While Barnes has been more effective as a playmaker with 3 assists, he is currently hampered by a foul flag for picking up three personal fouls. Bridges remains the anchor for a Knicks offense that is posting a superior 0.657 true shooting percentage.\n\n3. X-FACTORS / FOUL TROUBLE\nNew York is dominating the glass with a 40% offensive rebounding rate, contributing to a massive +10 rebound differential. Despite the Knicks committing 12 turnovers to Toronto's 8, the bench has provided a significant spark, outscoring the Raptors' reserves 25-19. Both teams have one starter currently sitting on three fouls, keeping the rotation tight as we head into the second half.\n\n4. SECOND-HALF OUTLOOK\nThe Knicks will secure a 7-point victory by maintaining their current edge in effective field goal percentage, which sits at 0.636 against Toronto\u2019s 0.556. By leveraging their rebounding advantage and continued bench production, New York will close out this game as predicted. Expect the Knicks to capitalize on Toronto\u2019s lower 0.467 field goal percentage to pull away in the final two quarters.",
+  "generated_at": "2026-10-16T00:45:06.553676Z"
+}

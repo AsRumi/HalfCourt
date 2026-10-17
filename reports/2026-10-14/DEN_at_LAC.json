@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "LAC",
+    "away_team": "DEN",
+    "game_date": "2026-10-14",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 58,
+    "ht_away_pts": 55,
+    "q1_home_pts": 24,
+    "q1_away_pts": 24,
+    "q2_home_pts": 34,
+    "q2_away_pts": 31,
+    "home_star_name": "Rui Hachimura",
+    "away_star_name": "Jamal Murray"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.7147,
+    "predicted_margin": 4,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_ft_pct",
+        "value": 0.2369,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_fg_pct",
+        "value": 0.191,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_ts_pct",
+        "value": -0.1668,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe Clippers hold a 58-55 lead heading into the locker room after a high-scoring second quarter where they outpaced Denver 34-31. LAC has successfully leveraged a 3-point momentum shift to gain the upper hand. With a superior 0.500 field goal percentage, the Clippers are dictating the pace of this contest.\n\n2. KEY PLAYER ANALYSIS\nRui Hachimura has been the focal point for the Clippers, contributing 16 points to lead the offensive charge. Jamal Murray is keeping Denver within striking distance with 14 points of his own. Despite their scoring production, both stars have been limited to just one assist apiece as the game remains a battle of individual shot-making.\n\n3. X-FACTORS / FOUL TROUBLE\nThe disparity at the charity stripe is glaring, as LAC is shooting a clinical 0.917 from the line compared to Denver\u2019s dismal 0.500. While Denver\u2019s bench has provided a massive 34 points to keep them competitive, the Clippers have maintained better ball security with only 6 turnovers. Discipline is a concern for LAC, however, as they have two starters already saddled with 3+ fouls.\n\n4. SECOND-HALF OUTLOOK\nThe Clippers are firmly in control and will secure a 4-point victory when the final buzzer sounds. By maintaining their efficient 3.67 assist-to-turnover ratio and capitalizing on Denver\u2019s poor free-throw shooting, LAC will close out this win. Expect the Clippers to tighten their defensive rotation to overcome their foul disadvantage and protect their home court.",
+  "generated_at": "2026-10-15T04:13:21.415729Z"
+}

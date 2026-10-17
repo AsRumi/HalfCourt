@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "DET",
+    "away_team": "TOR",
+    "game_date": "2026-10-16",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 59,
+    "ht_away_pts": 52,
+    "q1_home_pts": 33,
+    "q1_away_pts": 33,
+    "q2_home_pts": 26,
+    "q2_away_pts": 19,
+    "home_star_name": "Cade Cunningham",
+    "away_star_name": "Alijah Martin"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.7945,
+    "predicted_margin": 6,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": 0.6686,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_ts_pct",
+        "value": -0.1913,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_efg_pct",
+        "value": -0.1696,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe Detroit Pistons hold a 59-52 lead over the Toronto Raptors at the halftime intermission after breaking open a tied 33-33 first quarter with a dominant 26-19 second-period advantage. Detroit seized a crucial 7-point momentum shift heading into the locker room by asserting control on both ends of the floor. The Raptors face an uphill battle in the second half after getting outscored significantly in the second frame.\n\n2. KEY PLAYER ANALYSIS\nDetroit star Cade Cunningham has orchestrated the offense brilliantly, pacing the Pistons with 10 points while dishing out 5 assists to fuel the home team's efficient attack. On the other side, Toronto star Alijah Martin has kept the Raptors competitive by pouring in a game-high 15 points. However, Cunningham's playmaking superiority has given Detroit a distinct structural advantage at the break.\n\n3. X-FACTORS / FOUL TROUBLE\nShooting efficiency tells the story of the first half, as Detroit is scorching the nets with a 54.8% field goal percentage and a blistering 41.2% from beyond the arc. In stark contrast, Toronto is struggling to find any rhythm, shooting just 39.5% from the field and 28.6% from deep. The Pistons' massive edges in effective field goal percentage (0.631 to 0.442) and true shooting percentage (0.630 to 0.502) have completely overwhelmed the Raptors' defense.\n\n4. SECOND-HALF OUTLOOK\nThe Detroit Pistons are firmly positioned to secure this victory, backed by a high-confidence model prediction forecasting a DET win by 6 points. Toronto will need an immediate offensive awakening and a massive defensive correction to overcome their dismal shooting numbers. Expect Detroit to maintain their offensive pressure and protect their home floor through the final buzzer.",
+  "generated_at": "2026-10-17T00:21:11.407244Z"
+}

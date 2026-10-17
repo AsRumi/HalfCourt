@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "MEM",
+    "away_team": "CHA",
+    "game_date": "2026-10-16",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 50,
+    "ht_away_pts": 38,
+    "q1_home_pts": 23,
+    "q1_away_pts": 20,
+    "q2_home_pts": 27,
+    "q2_away_pts": 18,
+    "home_star_name": "Cameron Boozer",
+    "away_star_name": "Naz Reid"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.9698,
+    "predicted_margin": 17,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": 0.4861,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_ts_pct",
+        "value": -0.3989,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "home_efg_pct",
+        "value": 0.1587,
+        "direction": "favors_home"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe Memphis Grizzlies hold a commanding 50-38 lead over the Charlotte Hornets at the halftime break. Memphis asserted control by outscoring Charlotte 27-18 in the second quarter, fueling a strong momentum shift of 6. The Grizzlies capitalized on early opportunities while methodically building their double-digit advantage.\n\n2. KEY PLAYER ANALYSIS\nMemphis star Cameron Boozer leads the charge with 12 points and 1 assist, anchoring the home team's offense. On the opposing side, Charlotte star Naz Reid has contributed 7 points but has been limited in facilitating with 0 assists. Boozer's scoring efficiency has proven vital as the Grizzlies establish control of the floor.\n\n3. X-FACTORS / FOUL TROUBLE\nBall security has completely derailed the Hornets, who committed 19 turnovers leading to a dismal 0.47 AST/TO ratio compared to Memphis's 13 turnovers and 0.85 AST/TO ratio. Furthermore, Charlotte is fighting through discipline issues with one starter already carrying three or more fouls. The Grizzlies have capitalized on these miscues while maintaining a clean sheet with zero starters in major foul trouble.\n\n4. SECOND-HALF OUTLOOK\nMemphis is heavily favored to close out this victory and cruise to a 17-point win. The Grizzlies' superior three-point shooting at 36.8% and exceptional 92.9% free-throw shooting will be too much for Charlotte to overcome. As long as Memphis protects the ball and maintains its +7 rebound differential, the outcome remains firmly in their control.",
+  "generated_at": "2026-10-17T01:17:21.549231Z"
+}

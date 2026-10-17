@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "CHI",
+    "away_team": "MIN",
+    "game_date": "2026-10-16",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 67,
+    "ht_away_pts": 60,
+    "q1_home_pts": 33,
+    "q1_away_pts": 28,
+    "q2_home_pts": 34,
+    "q2_away_pts": 32,
+    "home_star_name": "Caleb Wilson",
+    "away_star_name": "Jaylen Clark"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.6662,
+    "predicted_margin": 3,
+    "confidence_tier": "medium",
+    "top_features": [
+      {
+        "feature": "away_fg_pct",
+        "value": 0.3889,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "home_pace_est",
+        "value": 0.3781,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "away_pace_est",
+        "value": -0.3516,
+        "direction": "favors_away"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe Chicago Bulls head into the locker room with a 67-60 advantage over the Minnesota Timberwolves after taking both quarters, 33-28 in the first and 34-32 in the second. Despite absorbing a -3 momentum shift, Chicago's consistent offensive execution has kept them firmly in control. Minnesota remains within striking distance, trailing by seven points as the game reaches the break.\n\n2. KEY PLAYER ANALYSIS\nMinnesota's Jaylen Clark leads all featured stars with 15 points, while Chicago's Caleb Wilson counters with 13 points and 2 assists. Clark has provided vital scoring punch for the Timberwolves, but Wilson's all-around facilitation is keeping the Bulls' offense humming. Both stars will need to elevate their play in the second half to dictate the game's final outcome.\n\n3. X-FACTORS / FOUL TROUBLE\nChicago is dominating the glass with a staggering +16 rebound differential and a massive 52.2% offensive rebound percentage, completely overwhelming Minnesota's 17.4% OREB%. However, discipline is a major concern for the Bulls, who have two starters carrying 3 or more fouls and a +3 foul differential. Meanwhile, Minnesota protects the ball exceptionally well with only 4 turnovers compared to Chicago's 8.\n\n4. SECOND-HALF OUTLOOK\nThe Bulls are mathematically locked in to secure a victory by a final margin of 3 points, backed by a 66.6% win probability. Chicago will lean on their superior 47.3% field goal shooting and relentless rebounding dominance to withstand Minnesota's 40.0% accuracy from beyond the arc. As long as the Bulls manage their foul trouble and limit turnovers, they will successfully close out this home win.",
+  "generated_at": "2026-10-17T01:17:38.381325Z"
+}

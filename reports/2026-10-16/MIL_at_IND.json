@@ -1,0 +1,42 @@
+{
+  "game_context": {
+    "home_team": "IND",
+    "away_team": "MIL",
+    "game_date": "2026-10-16",
+    "is_playoffs": false,
+    "is_live": true,
+    "ht_home_pts": 71,
+    "ht_away_pts": 56,
+    "q1_home_pts": 29,
+    "q1_away_pts": 21,
+    "q2_home_pts": 42,
+    "q2_away_pts": 35,
+    "home_star_name": "Pascal Siakam",
+    "away_star_name": "Tyler Herro"
+  },
+  "prediction": {
+    "predicted_winner": "home",
+    "win_probability": 0.9356,
+    "predicted_margin": 13,
+    "confidence_tier": "high",
+    "top_features": [
+      {
+        "feature": "away_oreb_pct",
+        "value": -0.5275,
+        "direction": "favors_away"
+      },
+      {
+        "feature": "away_fg_pct",
+        "value": 0.4764,
+        "direction": "favors_home"
+      },
+      {
+        "feature": "home_bench_ratio",
+        "value": 0.2949,
+        "direction": "favors_home"
+      }
+    ]
+  },
+  "commentary": "1. SCORE & MOMENTUM\nThe Indiana Pacers hold a commanding 71-56 lead over the Milwaukee Bucks after exploding for 42 points in the second quarter. Indiana built this advantage by shooting a scorching 53.8 percent from the field and 47.6 percent from beyond the arc. Milwaukee struggled to keep pace despite a 45.7 shooting clip, falling behind after dropping the opening frame 29-21.\n\n2. KEY PLAYER ANALYSIS\nPascal Siakam has dominated the floor for Indiana, pouring in 24 points to go along with 3 assists while avoiding foul trouble entirely. Meanwhile, Milwaukee star Tyler Herro has been held in check, managing just 9 points and 3 assists against the swarming Pacers defense. Siakam's efficiency has outpaced Herro's output, anchoring the entire offensive flow for the home side.\n\n3. X-FACTORS / FOUL TROUBLE\nBall movement and rebounding have completely tilted this matchup in Indiana's favor, evidenced by their 2.38 assist-to-turnover ratio compared to Milwaukee's 1.33. The Pacers also dominated the glass with a 30.4 offensive rebound percentage, severely limiting second-chance opportunities for the Bucks. Milwaukee is fighting uphill with two starters already sitting in foul trouble with 3-plus fouls.\n\n4. SECOND-HALF OUTLOOK\nThe Pacers are firmly in control of this contest and will secure a definitive victory by 13 points when the final buzzer sounds. Milwaukee's bench provided a brief spark with 20 points, but their 12.5 offensive rebound percentage and defensive lapses cannot overcome Indiana's 63.5 true shooting percentage. Expect the Pacers to maintain their offensive rhythm and coast to a comfortable home win.",
+  "generated_at": "2026-10-17T00:17:04.149671Z"
+}
